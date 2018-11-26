@@ -1,0 +1,44 @@
+{
+  name: "statink/yii2-sortable-table",
+  type: "yii2-extension",
+  license: "MIT",
+  description: "sortable-table asset bundle for stat.ink",
+  "minimum-stability": "stable",
+  require: {
+    // env
+    php: ">= 7.1.0",
+
+    // packages
+    "yiisoft/yii2": "~2.0.15",
+
+    // assets
+    "npm-asset/stupid-table-plugin": "^1.1.3",
+  },
+  config: {
+    "process-timeout": 1800,
+    "fxp-asset": {
+      "enabled": false
+    }
+  },
+  autoload: {
+    "psr-4": {
+      "statink\\yii2\\sortableTable\\": "src",
+    },
+  },
+  authors: [
+    {
+      name: "AIZAWA Hina",
+      email: "hina@bouhime.com",
+    },
+  ],
+  repositories: [
+    {
+      type: "composer",
+      url: "https://packagist.jp",
+    },
+    {
+      type: "composer",
+      url: "https://asset-packagist.org",
+    },
+  ],
+}

@@ -1,0 +1,15 @@
+.DS_Store
+.buildpath
+.idea
+.project
+.settings
+/.vagrant
+/composer.phar
+/node_modules/
+/phpunit.phar
+/phpunit.xml
+/tests/_output/*
+/tests/_support/_generated
+/vendor/
+Thumbs.db
+nbproject
