@@ -20,9 +20,6 @@ vendor: composer.lock composer.phar
 composer.lock: composer.json composer.phar
 	COMPOSER_ALLOW_SUPERUSER=1 ./composer.phar update --prefer-dist -vvv
 
-composer.json: composer.json5
-	json5 --space=4 --out-file=$@ $<
-
 composer.phar:
 	curl -sSL 'https://getcomposer.org/installer' | php -- --stable
 	touch -r composer.json $@
@@ -48,5 +45,12 @@ package-lock.json: package.json
 %.gz: %
 	gzip -9 < $< > $@
 
+BROTLI := $(shell if [ -e /usr/bin/brotli ]; then echo brotli; else echo bro; fi )
 %.br: %
-	bro --force --quality 11 --input $< --output $@ --no-copy-stat
+ifeq ($(BROTLI),bro)
+	bro --quality 11 --force --input $< --output $@ --no-copy-stat
+else
+	brotli -Zfo $@ $<
+endif
+	@chmod 644 $@
+	@touch $@
