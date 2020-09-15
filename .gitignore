@@ -4,6 +4,7 @@
 .project
 .settings
 /.vagrant
+/composer.lock
 /composer.phar
 /node_modules/
 /phpunit.phar
