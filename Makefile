@@ -15,10 +15,10 @@ clean:
 	rm -rf assets/*.js assets/*.js.gz assets/*.js.br
 
 vendor: composer.lock composer.phar
-	COMPOSER_ALLOW_SUPERUSER=1 ./composer.phar install --prefer-dist -vvv
+	./composer.phar install --prefer-dist
 
 composer.lock: composer.json composer.phar
-	COMPOSER_ALLOW_SUPERUSER=1 ./composer.phar update --prefer-dist -vvv
+	./composer.phar update --prefer-dist
 
 composer.phar:
 	curl -sSL 'https://getcomposer.org/installer' | php -- --stable
