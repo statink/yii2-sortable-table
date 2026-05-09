@@ -3,11 +3,14 @@
   "version": "0.0.0",
   "author": "AIZAWA Hina",
   "license": "MIT",
+  "type": "module",
   "dependencies": {
-    "@babel/cli": "^7.23.0",
-    "@babel/core": "^7.23.2",
-    "@babel/preset-env": "^7.23.2",
-    "uglify-js": "^3.17.4"
+    "@types/jquery": "^4.0.0",
+    "eslint": "^9.39.4",
+    "neostandard": "^0.13.0",
+    "terser": "^5.47.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.2"
   },
   "browserslist": [
     ">= 1%",
