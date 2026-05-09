@@ -10,9 +10,11 @@
     "uglify-js": "^3.17.4"
   },
   "browserslist": [
-    "last 2 versions",
-    "ie 11",
-    "firefox esr",
-    "> 1%"
+    ">= 1%",
+    "last 2 major versions",
+    "not dead",
+    "Firefox ESR",
+    "not Explorer <= 11",
+    "not kaios <= 2.5"
   ]
 }
